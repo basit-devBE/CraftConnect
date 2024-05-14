@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:ivory;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sign-up-form{
+    width: 300px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    width: 400px;
+}
+
+.sign-up-form > h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    border: 1px solid #999;
+    outline: none;
+    align-items: center;
+}
+
+button{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    border: 1px solid #999;
+    outline: none;
+    background-color: #1c8adb;
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #1c8adb;
+}
+hr{
+    margin: 20px 0;
+    border: 1px solid #999;
+}
+
+.or{
+    margin: 20px auto 10px;
+    color: #999;
+    width: 30px;
+}
+
+img{
+    margin-top: -5rem;
+    width: 5rem;
+    color: #1c8adb;
+    background-color: #1c8adb;
+}
+
+.svg{
+    height:1rem;
+    width: 1rem;
+    color: #1c8adb;
+    align-self: self-start;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    color: #1c8adb;
+}
+
+form input{
+    border: none;
+    border-bottom: 1px solid #999;
+    line-height: 1.5;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form button{
+    margin: 10px 0;
+    padding: 10px;
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid #999;
+    outline: none;
+    background-color: #1c8adb;
+    color: white;
+    cursor: pointer;
+}

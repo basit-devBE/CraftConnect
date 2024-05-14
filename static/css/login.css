@@ -1,0 +1,98 @@
+body{
+    
+    font-family: 'Poppins', sans-serif;
+    background-color:ivory;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form{
+    width: 300px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    width: 400px;
+}
+
+.login-form > h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    border: 1px solid #999;
+    outline: none;
+    align-items: center;
+}
+
+button{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    border: 1px solid #999;
+    outline: none;
+    background-color: #1c8adb;
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #1c8adb;
+}
+
+hr{
+    margin: 20px 0;
+    border: 1px solid #999;
+}
+
+.or{
+    margin: 20px auto 10px;
+    color: #999;
+    width: 30px;
+}
+
+img{
+   margin-top: -5rem;
+   width: 5rem;
+    color: #1c8adb;
+    
+}
+
+#message1{
+    display: none;
+    background: #f1f1f1;
+    color: blue;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.header1{
+    background-color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.logo1{
+    display: flex;
+    justify-content:flex-start;
+    margin-top:20px;
+    align-items: center;
+}

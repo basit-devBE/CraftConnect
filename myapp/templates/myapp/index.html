@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftConnect</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="navbar-logo"><a href='#'>CraftConnect</a></h2>
+        <div class="navbar-menu">
+            <a href='#' class="navbar-item">Home</a>
+            <a href='#' class="navbar-item">About</a>
+            <a href='#' class="navbar-item">Contact</a>
+            <span style="color: white;">  {{username}} </span>
+            <a href="{% url 'logout' %}" class="navbar-item">Logout</a>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    
+    
+    <header>
+        <h1 class="header-title">
+            FIND YOUR <br> <span>DREAM JOB</span> <br> WITH CRAFTCONNECT
+        </h1>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>       
+    
+    <div class="search-wrapper">
+        <div class="search-box">
+           <div class="search-card">
+                <input type="text" class="search-input" placeholder="Search for jobs">
+                <button class="search-button">Search</button>
+           </div>
+    </div>
+    </div>
+    <div class="filter-box">
+        <div class="filter-dropdowwn">
+            <select class="filter-select" id="job-level" name="job-level">
+                <option value="all">Job level</option>
+                <option value="entry">Entry Level</option>
+                <option value="intermediate">Intermediate Level</option>
+                <option value="senior">Senior Level</option>
+            </select>
+            <select class="filter-select" id="job-funtion" name="job-funtion">
+               <option value="all">Job Function</option>
+               <option value="braiding">Braiding</option>
+                <option value="knitting">Knitting</option>
+                <option value="weaving">Weaving</option>
+                <option value="crocheting">Crocheting</option>
+                <option value="embroidery">Embroidery</option>
+                <option value="sewing">Sewing</option>
+                <option value="drawing">Drawing</option>
+                <option value="painting">Painting</option>
+                <option value="sculpting">Sculpting</option>
+            </select>
+            <select class="filter-select" id="employment" name="employment">
+                <option value="all">Employment Type</option>
+                <option value="full-time">Full Time</option>
+                <option value="part-time">Part Time</option>
+                <option value="contract">Contract</option>
+                <option value="internship">Internship</option>
+                <option value="temporary">Temporary</option>
+            </select>
+            <select class="filter-select" id="location" name="location">
+                <option value="all">Location</option>
+                <option value="remote">Remote</option>
+                <option value="accra">Accra</option>
+                <option value="kumasi">Kumasi</option>
+                <option value="cape-coast">Cape Coast</option>
+                <option value="tamale">Tamale</option>
+                <option value="ho">Ho</option>
+                <option value="sunyani">Sunyani</option>
+                <option value="bolgatanga">Bolgatanga</option>
+                <option value="koforidua">Koforidua</option>
+                <option value="sekondi-takoradi">Sekondi-Takoradi</option>
+            </select>
+            <select class="filter-select" id="eduation" name="education">
+                <option value="all">Level of Education</option>
+                <option value="none">None</option>
+                <option value="high-school">High School</option>
+                <option value="diploma">Diploma</option>
+                <option value="bachelors">Bachelors</option>
+                <option value="masters">Masters</option>
+                <option value="phd">PhD</option>
+            </select>
+        </div>
+    </div>
+    
+        <h1 class="apply-header">
+            APPLY FOR JOBS
+        </h1>   
+       
+    <section class="job-list" id="jobs">
+
+           <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">{{job.jobtitle}}</h3>
+                    <p class="job-card-company">{{job.company}}</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">{{job.joblocation}}</a>
+                    <a href='#' class="job-card-type">{{job.jobtype}}</a>
+                    <a href='#' class="job-card-level">{{job.joblevel}}</a>
+                    <a href='#' class="job-card-function">{{job.jobdescription}}</a>
+                    <a href='#' class="job-card-education">{{job.jobdescription}}</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">Knitting Instructor</h3>
+                    <p class="job-card-company">CraftConnect</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">Accra</a>
+                    <a href='#' class="job-card-type">Full Time</a>
+                    <a href='#' class="job-card-level">Entry Level</a>
+                    <a href='#' class="job-card-function">Knitting</a>
+                    <a href='#' class="job-card-education">High School</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">Weaving Instructor</h3>
+                    <p class="job-card-company">CraftConnect</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">Accra</a>
+                    <a href='#' class="job-card-type">Full Time</a>
+                    <a href='#' class="job-card-level">Entry Level</a>
+                    <a href='#' class="job-card-function">Weaving</a>
+                    <a href='#' class="job-card-education">High School</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">Crocheting Instructor</h3>
+                    <p class="job-card-company">CraftConnect</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">Accra</a>
+                    <a href='#' class="job-card-type">Full Time</a>
+                    <a href='#' class="job-card-level">Entry Level</a>
+                    <a href='#' class="job-card-function">Crocheting</a>
+                    <a href='#' class="job-card-education">High School</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>   
+            </div>
+            <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">Embroidery Instructor</h3>
+                    <p class="job-card-company">CraftConnect</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">Accra</a>
+                    <a href='#' class="job-card-type">Full Time</a>
+                    <a href='#' class="job-card-level">Entry Level</a>
+                    <a href='#' class="job-card-function">Embroidery</a>
+                    <a href='#' class="job-card-education">High School</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-card-header">
+                    <h3 class="job-card-title">Sewing Instructor</h3>
+                    <p class="job-card-company">CraftConnect</p>
+                </div>
+                <div class="job-card-body">
+                    <a href='#' class="job-card-location">Accra</a>
+                    <a href='#' class="job-card-type">Full Time</a>
+                    <a href='#' class="job-card-level">Entry Level</a>
+                    <a href='#' class="job-card-function">Sewing</a>
+                    <a href='#' class="job-card-education">High School</a>
+                </div>
+                <div class="job-card-footer">
+                    <button class="job-card-button">Apply</button>
+                </div>
+            </div>
+            
+                <button class="more-jobs">
+                    More Jobs
+                </button>
+    </section>
+
+    <section class="join">
+        <div class="join-detail">
+            <h1 class="section-title">LETS FIND YOUR NEW JOB</h1>
+            <p class="section-text">CraftConnect is a platform that connects crafters with job opportunities. We have a wide range of job listings for crafters of all levels. 
+                Whether you are a beginner or an expert, 
+                we have a job for you. Sign up today and start applying for jobs.</p>
+        </div>
+        <button class="join-button">Join Now</button>
+    </section>
+
+
+    <secti class =" featured">
+        <div class="footer">
+            <h1 class="section-title">CONTACT US</h1>
+            <p>On my social media pages</p>
+        <div class="social-icons">
+            <a href='https://twitter.com/notbs362' class="social-icon">
+                <i data-lucide="twitter"></i>
+            </a>
+            <a href='https://github.com/basit-devBE' class="social-icon">
+                <i data-lucide="github"></i>
+            </a>
+            <a href='mailto:basitmohammed32@gmail.com' class="social-icon">
+                <i data-lucide="mail"></i>
+            </a>
+            <a href='www.linkedin.com/in/abdul-basit-mohammed-877093281' class="social-icon">
+                <i data-lucide="linkedin"></i>
+           </a>
+        </div>
+    </div>
+
+    </section>
+
+<script is:inline src="https://unpkg.com/lucide@latest"></script>
+<script is:inline>
+    lucide.createIcons();
+</script>
+<script src="{% static 'javascript/app.js' %}"></script>
+</body>
+</html>

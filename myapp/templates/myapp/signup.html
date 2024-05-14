@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | CraftConnect</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}">
+</head>
+<body>
+   <div class="sign-up-form">
+    <img src="{% static 'images/output.png' %}" alt="logo" class="logo">
+    <h1> SIGN UP NOW</h1>
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field.label }}
+            {{ field }}
+        {% endfor %}
+
+        {{ form.errors }}
+        
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        <button type="submit">Sign Up</button>
+    </form>
+
+   </div>
+
+   <script is:inline src="https://unpkg.com/lucide@latest"></script>
+   <script is:inline>
+       lucide.createIcons();
+   </script>
+</body>
+</html>
