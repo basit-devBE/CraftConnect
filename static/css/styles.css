@@ -243,6 +243,17 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    
+}
+
+
+.job-card-button{
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 7rem;
 }
 
 .job-card-location{
@@ -264,14 +275,6 @@ header{
     background-color: rgba(0, 118, 222, 0.8);
 }
 
-.job-card-button{
-    background-color: var(--primaryColor);
-    color: var(--whiteColor);
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    width: 7rem;
-}
 
 .apply-header{
     justify-content: center;

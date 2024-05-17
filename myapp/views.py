@@ -61,3 +61,6 @@ def logout(request):
 
 def land(request):
     return render(request, 'myapp/land.html')
+
+def postjob(request):
+    return render(request, 'myapp/post.html')
