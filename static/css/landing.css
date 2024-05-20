@@ -102,7 +102,7 @@ body {
   background-color: none;
 }
 
-.log1 > a.signup::before {
+.log1 > .login > a.signup::before {
   content: "/";
   color: #000000;
 }
