@@ -7,6 +7,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}">
+    <link href="{%static 'javascript/jquery-3.7.1.min.js.' %}">
+   
+
 </head>
 <body>
     <nav class="navbar">
@@ -234,6 +237,9 @@
                 <button class="more-jobs">
                     More Jobs
                 </button>
+                <h1 id="test">
+                    hi
+                </h1>
     </section>
 
     <section class="join">
@@ -274,5 +280,7 @@
     lucide.createIcons();
 </script>
 <script src="{% static 'javascript/app.js' %}"></script>
+<script src="{%static 'javascript/jquery-3.7.1.min.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
