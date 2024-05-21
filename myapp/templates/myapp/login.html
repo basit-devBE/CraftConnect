@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
-<head>
-    <!--
-        This line declares the document type and tells the browser that this document is an HTML5 document.
-    -->
-    <meta charset="UTF-8">
-    <!--
-        This line sets the character encoding for the document to UTF-8.
-    -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-        This line sets the viewport settings for the document, which controls the size and scaling of the browser window.
-    -->
->>>>>>> master
     <title>Login | CraftConnect</title>
     <!--
         This line sets the title of the page, which is displayed in the browser's title bar or tab.
     -->
     {% load static %}
-<<<<<<< HEAD
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}" />
     <link
@@ -40,44 +24,11 @@
         <img src="{% static 'images/hammer-svgrepo-com.svg' %}" alt="logo" />
         <h1>CraftConnect</h1>
       </div>
-=======
-    <!--
-        This line loads the staticfiles app, which allows the template to access static files like CSS, JavaScript, and images.
-    -->
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <!--
-        This line links to an external CSS file that styles the login page.
-    -->
-    <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}">
-    <!--
-        This line sets the favicon of the page to an SVG image of a hammer.
-    -->
-</head>
-<body>
-    <!--
-        This tag defines the header of the page, which contains the logo and the title of the page.
-    -->
-    <header class="header1">
-        <!--
-            This tag defines a division or section of the page that contains the logo and the title of the page.
-        -->
-        <div class="logo1">
-            <!--
-                This line displays an image that serves as the logo for the page.
-            -->
-            <img src="{% static 'images/hammer-svgrepo-com.svg' %}" alt="logo" class="logo">
-            <!--
-                This line displays the title of the page.
-            -->
-            <h1>CraftConnect</h1>
-        </div>
->>>>>>> master
     </header>
     <!--
         This tag defines the login form of the page.
     -->
     <div class="login-form">
-<<<<<<< HEAD
       <img src="{% static 'images/output.png' %}" alt="logo" />
       <h1>LOGIN</h1>
       <div class="other-mails">
@@ -143,67 +94,3 @@
     </div>
   </body>
 </html>
-=======
-        <!--
-            This line displays an image that serves as the logo for the login form.
-        -->
-        <img src="{% static 'images/output.png' %}" alt="logo" class="logo">
-        <!--
-            This line displays a heading that instructs the user to log in.
-        -->
-        <h1>LOGIN</h1>
-        <!--
-            This tag defines the login form of the page.
-        -->
-        <form method="post" action="{% url 'login' %}">
-            <!--
-                This line generates a CSRF token, which helps prevent cross-site request forgery attacks.
-            -->
-            {% csrf_token %}
-            <!--
-                This line displays the label for the username form field.
-            -->
-            <label for="username">Username:</label>
-            <!--
-                This line displays the username form field.
-            -->
-            <input type="text" id="username" name="username" class="input-box" placeholder="Enter your username">
-            <!--
-                This line displays the label for the password form field.
-            -->
-            <label for="password">Password:</label>
-            <!--
-                This line displays the password form field.
-            -->
-            <input type="password" id="password" name="password" class="input-box" placeholder="Enter your password">
-            <!--
-                This line defines a button that submits the form when clicked.
-            -->
-            <button type="submit">Login</button>
-            <!--
-                This line creates a horizontal rule that separates the login form from the Google login button.
-            -->
-            <hr>
-            <!--
-                This line displays a message that prompts the user to log in with Google.
-            -->
-            <p class="or">OR</p>
-            <!--
-                This line defines a button that logs the user in with Google when clicked.
-            -->
-            <button class="google-btn">Login with Google</button>
-            <!--
-                This line displays any errors that occur when the form is submitted.
-            -->
-            {% for message in messages %}
-                <p style="color: blue; ">{{ message }}</p>
-            {% endfor %}
-            <!--
-                This line displays a message that prompts the user to sign up if they don't have an account.
-            -->
-            <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
-        </form>
-    </div>
-</body>
-</html>
->>>>>>> master
