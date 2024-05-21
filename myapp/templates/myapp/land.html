@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CraftConnect</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}">
-   
-</head>
-<body>
-  <header class="header1">
-        <div class="logo1">
-            <img src="{% static 'images/hammer-svgrepo-com.svg' %}" alt="logo" class="logo">
-            <h1>CraftConnect</h1>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}" />
+  </head>
+  <body>
+    <header class="header1">
+      <div class="logo1">
+        <img
+          src="{% static 'images/hammer-svgrepo-com.svg' %}"
+          alt="logo"
+          class="logo"
+        />
+        <h1>CraftConnect</h1>
+      </div>
+      <div class="nalinks">
+        <nav>
+          <ul class="lists">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{% url 'login' %}">Find Jobs</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="log1">
+        <a href="{% url 'login' %}" class="login">Login</a>
+        <span>/</span>
+        <a href="{% url 'signup' %}" class="signup">Sign Up</a>
+        <div>
+          <button onclick="window.location.href='{% url 'postjob' %}'">
+            POST A JOB
+          </button>
         </div>
-        <div class="nalinks">
-            <nav>
-                <ul class="lists">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="{% url 'login' %}">Find Jobs</a></li>
-
-                </ul>
-            </nav>
-        </div>
-        <div class="log1">
-            <a href="{% url 'login' %}" class="login">Login</a>
-            <span>/</span>
-            <a href="{% url 'signup' %}" class="signup">Sign Up</a>
-            <div>
-                <button onclick="window.location.href='{% url 'postjob' %}'">POST A JOB</button>
-            </div>
-        </div>
-  </header>
+      </div>
+    </header>
 
     <section class="hero">
-       <div class="herosection">
-            <div class="hi">
-                <h1>Helping you<span>Land a Job</span> and Live your Dream</h1>
-                <p>Explore new jobs and carrer opportunities with us.
-                    Find the best jobs that suits your skills and experience.
-                </p>
-                <div class="input-section">
-                    <input type="text" placeholder="Search for a Job">
-                    <button class="button1">Search</button>
-                </div>
-            </div>
+      <div class="herosection">
+        <div class="hi">
+          <h1>Helping you<span>Land a Job</span> and Live your Dream</h1>
+          <p>
+            Explore new jobs and carrer opportunities with us. Find the best
+            jobs that suits your skills and experience.
+          </p>
+          <div class="input-section">
+            <input type="text" placeholder="Search for a Job" />
+            <button class="button1">Search</button>
+          </div>
         </div>
-        <div class="herosection2">
-            <img src="{% static 'images/call-taxi-svgrepo-com.svg' %}" alt="hero" class="heroimg">
-        </div>
+      </div>
+      <div class="herosection2">
+        <img
+          src="{% static 'images/call-taxi-svgrepo-com.svg' %}"
+          alt="hero"
+          class="heroimg"
+        />
+      </div>
     </section>
-</body>
+  </body>
 </html>
