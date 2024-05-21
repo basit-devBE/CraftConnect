@@ -1,98 +1,186 @@
-body{
-    
-    font-family: 'Poppins', sans-serif;
-    background-color:ivory;
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.login-form{
-    width: 300px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
-    padding: 20px;
-    margin: 8% auto 0;
-    text-align: center;
-    width: 400px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: ivory;
+  padding: relative;
 }
 
-.login-form > h1{
-    color: #1c8adb;
-    margin-bottom: 30px;
+.header1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky; /* Changed from fixed to sticky */
+  top: 0; /* Required for sticky positioning */
+  z-index: 1; /* Ensure it appears above other content */
+  font-size: 19px;
 }
 
-.input-box{
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 95%;
-    border: 1px solid #999;
-    outline: none;
-    align-items: center;
+.logo1 {
+  display: flex;
+  justify-content: flex-start;
 }
 
-button{
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 95%;
-    border: 1px solid #999;
-    outline: none;
-    background-color: #1c8adb;
-    color: white;
-    cursor: pointer;
+.logo1 > img {
+  width: 45px;
+  height: 32px;
+  margin-left: 10px;
 }
 
-a{
-    text-decoration: none;
-    color: #1c8adb;
+.logo1 > h1 {
+  font-size: 1.1rem;
+  margin-left: 2px;
+  padding-top: 10px;
+  color: #000000;
 }
 
-hr{
-    margin: 20px 0;
-    border: 1px solid #999;
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 500px;
+  border: 1px solid rgb(218, 212, 212);
 }
 
-.or{
-    margin: 20px auto 10px;
-    color: #999;
-    width: 30px;
+.login-form > h1 {
+  color: #1c8adb;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
-img{
-   margin-top: -5rem;
-   width: 5rem;
-    color: #1c8adb;
-    
+.login-form > img {
+  margin-top: -5rem;
+  width: 5rem;
+  color: #1c8adb;
+  border-radius: 20px;
 }
 
-#message1{
-    display: none;
-    background: #f1f1f1;
-    color: blue;
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
+.other-mails {
+  grid-row-gap: 4px;
+  grid-column-gap: 4px;
+  column-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 5px;
 }
 
-.header1{
-    background-color: #ffffff;
-    padding: 10px 0;
-    display: flex;
-    background: transparent;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
+.login-form .mails {
+  position: relative;
+  background-color: ivory;
+  color: #000000;
 }
 
-.logo1{
-    display: flex;
-    justify-content:flex-start;
-    margin-top:20px;
-    align-items: center;
+.other-mails button {
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(218, 212, 212);
+  color: #999;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mails {
+  position: absolute;
+  left: 2px; /* Adjust this value to position the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.mails .fa-github {
+  color: black;
+}
+
+.mails .fa-facebook {
+  color: #1c8adb;
+}
+
+.mails-logo {
+  position: relative;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  left: 2px; /* Adjust this value to position the icon */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  width: 100%;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+} */
+
+.input-box {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 95%;
+  border: 1px solid #999;
+  outline: none;
+  align-items: center;
+}
+
+.btn button {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 95%;
+  border: 1px solid #999;
+  outline: none;
+  background-color: #1c8adb;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #1c8adb;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid #999;
+}
+
+.or {
+  margin: 20px auto 10px;
+  color: #999;
+  width: 30px;
+}
+
+#message1 {
+  display: none;
+  background: #f1f1f1;
+  color: blue;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
 }

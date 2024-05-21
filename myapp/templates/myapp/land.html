@@ -7,6 +7,16 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
     <link rel="icon" type="image/png" href="{% static 'images/hammer.svg' %}" />
+<<<<<<< HEAD
+=======
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+>>>>>>> 83c97bca8f0d459be26c4515ca47932998cb793f
   </head>
   <body>
     <header class="header1">
@@ -21,16 +31,27 @@
       <div class="nalinks">
         <nav>
           <ul class="lists">
+<<<<<<< HEAD
             <li><a href="#">Home</a></li>
+=======
+            <li><a href="#" class="active">Home</a></li>
+>>>>>>> 83c97bca8f0d459be26c4515ca47932998cb793f
             <li><a href="#">About</a></li>
             <li><a href="{% url 'login' %}">Find Jobs</a></li>
           </ul>
         </nav>
       </div>
       <div class="log1">
+<<<<<<< HEAD
         <a href="{% url 'login' %}" class="login">Login</a>
         <span>/</span>
         <a href="{% url 'signup' %}" class="signup">Sign Up</a>
+=======
+        <div class="login">
+          <a href="{% url 'login' %}" class="login">Login</a>
+          <a href="{% url 'signup' %}" class="signup">Sign Up</a>
+        </div>  
+>>>>>>> 83c97bca8f0d459be26c4515ca47932998cb793f
         <div>
           <button onclick="window.location.href='{% url 'postjob' %}'">
             POST A JOB
@@ -42,13 +63,21 @@
     <section class="hero">
       <div class="herosection">
         <div class="hi">
+<<<<<<< HEAD
           <h1>Helping you<span>Land a Job</span> and Live your Dream</h1>
+=======
+          <h1>Helping you<span> Land a Job</span> and Live your Dream</h1>
+>>>>>>> 83c97bca8f0d459be26c4515ca47932998cb793f
           <p>
             Explore new jobs and carrer opportunities with us. Find the best
             jobs that suits your skills and experience.
           </p>
           <div class="input-section">
             <input type="text" placeholder="Search for a Job" />
+<<<<<<< HEAD
+=======
+            <i class="fa-solid fa-magnifying-glass"></i>
+>>>>>>> 83c97bca8f0d459be26c4515ca47932998cb793f
             <button class="button1">Search</button>
           </div>
         </div>
