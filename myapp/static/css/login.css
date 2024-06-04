@@ -142,10 +142,52 @@ body {
   border-radius: 20px;
   padding: 10px;
   margin: 10px 0;
+  max-width: 500px;
   width: 95%;
-  border: 1px solid #999;
+  border: 1px solid #9191b5;
   outline: none;
   align-items: center;
+  /* background-color: #becdeb; */
+}
+
+.password-container {
+  display: flex;
+  border: 1px solid #999;
+  max-width: 500px;
+  width: 95%;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #becdeb;
+  position: relative;
+  /* background: #ae1717; */
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 20px;
+  
+}
+
+/* .password-container input[type="password"] {
+  background-color: rgb(114, 44, 67);
+} */
+
+/* .ji {
+  margin-top: 10px;
+  display: block;
+} */
+
+.password-container img {
+  position: absolute;
+  width: 20px;
+  cursor: pointer;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btn button {
@@ -165,7 +207,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #007BFF; /* Bootstrap primary button color */
+  background-color: #007bff; /* Bootstrap primary button color */
   border: none;
   border-radius: 4px;
   text-align: center;

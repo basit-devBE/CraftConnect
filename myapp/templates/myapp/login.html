@@ -61,34 +61,70 @@
         <!-- <div class="separator">or</div> -->
       </div>
       <p class="or">OR</p>
+
       <form method="post" action="{% url 'login' %}">
-        <input
-          type="name"
-          class="input-box"
-          placeholder=" username"
-          name="username"
-        />
-        <input
-          type="password"
-          class="input-box"
-          placeholder=" password"
-          name="password"
-        />
-        {% csrf_token %}
-        <div class="btn">
-          <button type="submit">Login</button>
-        </div>
-        <hr />
-        <div class="button-link">
-          <a href="{% url 'signup' %}">Sign Up</a>
+        <!-- Username display container -->
+        <div>
+          <input
+            type="name"
+            class="input-box"
+            placeholder=" username"
+            name="username"
+          />
         </div>
 
-        {% for message in messages %}
-        <p style="color: blue">{{ message }}</p>
-        {% endfor %}
+        <!-- Password display container -->
+        <div class="password-container">
+          <input
+            type="password"
+            placeholder=" password"
+            name="password"
+            id="password"
+          />
+
+          <img
+            src="{% static 'images/password_Images/eye-close.png' %}"
+            alt="close-eye"
+            id="eyeClose"
+          />
+        </div>
+
+        <!-- / -->
+        <div class="ji">
+          {% csrf_token %}
+          <div class="btn">
+            <button type="submit">Login</button>
+          </div>
+          <hr />
+          <div class="button-link">
+            <a href="{% url 'signup' %}">Sign Up</a>
+          </div>
+
+          {% for message in messages %}
+          <p style="color: blue">{{ message }}</p>
+          {% endfor %}
+        </div>
+        <!-- / -->
 
         <!-- <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p> -->
       </form>
     </div>
+
+    <!-- For hiding and displaying of the password -->
+    <script>
+      let password = document.getElementById("password");
+      let eyeClose =document.getElementById("eyeClose");
+
+      eyeClose.onclick = function (){
+        if(password.type == "password"){
+          password.type ="text";
+          eyeClose.src="{% static 'images/password_Images/Eye_open.png' %}";
+        }else {
+          password.type ="password";
+          eyeClose.src= "{% static 'images/password_Images/eye-close.png' %}"
+        }
+
+      }
+    </script>
   </body>
 </html>
