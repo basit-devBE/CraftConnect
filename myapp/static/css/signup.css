@@ -1,103 +1,158 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color:ivory;
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.sign-up-form{
-    width: 300px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: ivory;
+  padding: relative;
+}
+
+.header1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky; /* Changed from fixed to sticky */
+  top: 0; /* Required for sticky positioning */
+  z-index: 1; /* Ensure it appears above other content */
+  font-size: 19px;
+}
+
+.logo1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo1 > img {
+  width: 45px;
+  height: 32px;
+  margin-left: 10px;
+}
+
+.logo1 > h1 {
+  font-size: 1.1rem;
+  margin-left: 2px;
+  padding-top: 10px;
+  color: #000000;
+}
+
+/* -----------SIGNUP FORMS----------------- */
+.sign-up-form {
+  /* width: 300px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     padding: 20px;
     margin: 8% auto 0;
     text-align: center;
-    width: 400px;
+    width: 400px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 500px;
+  border: 1px solid rgb(218, 212, 212);
 }
 
-.sign-up-form > h1{
-    color: #1c8adb;
-    margin-bottom: 30px;
+.sign-up-form > h1 {
+  color: #1c8adb;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
-.input-box{
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 95%;
-    border: 1px solid #999;
-    outline: none;
-    align-items: center;
+.sign-up-form > img {
+  margin-top: -5rem;
+  width: 5rem;
+  color: #1c8adb;
+  border-radius: 20px;
 }
 
-button{
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 95%;
-    border: 1px solid #999;
-    outline: none;
-    background-color: #1c8adb;
-    color: white;
-    cursor: pointer;
-}
-
-a{
-    text-decoration: none;
-    color: #1c8adb;
-}
-hr{
-    margin: 20px 0;
-    border: 1px solid #999;
-}
-
-.or{
-    margin: 20px auto 10px;
-    color: #999;
-    width: 30px;
-}
-
-img{
-    margin-top: -5rem;
-    width: 5rem;
-    color: #1c8adb;
-    background-color: #1c8adb;
-}
-
-.svg{
-    height:1rem;
-    width: 1rem;
-    color: #1c8adb;
-    align-self: self-start;
+.input-box {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  max-width: 500px;
+  width: 95%;
+  border: 1px solid #9191b5;
+  outline: none;
+  align-items: center;
 }
 
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2px;
-    color: #1c8adb;
+
+/* hi */
+
+button {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 95%;
+  border: 1px solid #999;
+  outline: none;
+  background-color: #1c8adb;
+  color: white;
+  cursor: pointer;
 }
 
-form input{
-    border: none;
-    border-bottom: 1px solid #999;
-    line-height: 1.5;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    width: 100%;
+a {
+  text-decoration: none;
+  color: #1c8adb;
+}
+hr {
+  margin: 20px 0;
+  border: 1px solid #999;
 }
 
-form button{
-    margin: 10px 0;
-    padding: 10px;
-    width: 95%;
-    border-radius: 20px;
-    border: 1px solid #999;
-    outline: none;
-    background-color: #1c8adb;
-    color: white;
-    cursor: pointer;
+.or {
+  margin: 20px auto 10px;
+  color: #999;
+  width: 30px;
+}
+
+img {
+  margin-top: -5rem;
+  width: 5rem;
+  color: #1c8adb;
+  background-color: #1c8adb;
+}
+
+.svg {
+  height: 1rem;
+  width: 1rem;
+  color: #1c8adb;
+  align-self: self-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  color: #1c8adb;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid #999;
+  line-height: 1.5;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 95%;
+  border-radius: 20px;
+  border: 1px solid #999;
+  outline: none;
+  background-color: #1c8adb;
+  color: white;
+  cursor: pointer;
 }

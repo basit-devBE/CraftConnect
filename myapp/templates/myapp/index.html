@@ -21,41 +21,139 @@
 <body>
     <section class=" head-1">
    
-
         <nav class="navbar">
-            <!-- <h2 class="navbar-logo"><a href='#'>CraftConnect</a></h2> -->
-            <div class="logo1">
-            <img
-              src="{% static 'images/hammer-svgrepo-com.svg' %}"
-              alt="logo"
-              class="logo"
-            />
-            <h1>
-              <a href="{% url 'land' %}" >CraftConnect</a
-              >
-            </h1>
-          </div>
-        
-        <div class="nalinks">
-            <nav>
-                <ul class="lists">
-                    <li><a href="#">Homew</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <span style="color: rgb(138, 26, 26);">  {{username}} </span>
-              </ul>
-            </nav>
-          </div>
-          <div class="log1">
-            <div class="login">
-                <a href="{% url 'logout' %}" class="login">Logout</a>
-            </div>
-        </div>
-        </nav>
+
+            <!-- PUTTING LOGO AND LINKS IN A -->
+            <div class="logo-navlinks">
+                <div class="logo1">
+                    <img
+                    src="{% static 'images/hammer-svgrepo-com.svg' %}"
+                    alt="logo"
+                    class="logo"
+                    />
+                    <h1>
+                      <a href="{% url 'land' %}" >CraftConnect</a>
+                    </h1>
+                </div>
+            
+                <!-- ----------LINKS CONTAINER---------- -->
+                <div class="nalinks">
+                    <nav>
+                        <ul class="lists">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <span style="color: rgb(138, 26, 26);">  {{username}} </span>
+                        </ul>
+                    </nav>
+                </div>
     
+
+            </div>
+            <!-- -----------LOGO CONTAINER---------- -->
+
+         
+            <!-- -------SEARCH INPUT CONTAINER------ -->
+            <div class="input-section">
+                <input type="text" placeholder="Search for a Job" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- --------LOGOUT CONTAINER------- -->
+            <div class="log1">
+                <div class="login">
+                    <a href="{% url 'logout' %}" class="login">Logout</a>
+                </div>
+            </div>
+
+         
+
+
+        </nav>
+
+            <!-- -------FILTER SECTION --------->
+    <div class="filter-box">
+        <div class="filter-dropdown">
+            <!-- Putting all selection in a div container for easy adjustment or styling -->
+
+            <!-- Job level div -->
+            <div>
+                <select class="filter-select" id="job-level" name="job-level">
+                    <option value="all">Job levels</option>
+                    <option value="entry">Entry Level</option>
+                    <option value="intermediate">Intermediate Level</option>
+                    <option value="senior">Senior Level</option>
+                </select>
+            </div>
+
+            <!-- Job junction div -->
+            <div>
+                <select class="filter-select" id="job-funtion" name="job-funtion">
+                    <option value="all">Job Function</option>
+                    <option value="braiding">Braiding</option>
+                    <option value="knitting">Knitting</option>
+                    <option value="weaving">Weaving</option>
+                    <option value="crocheting">Crocheting</option>
+                    <option value="embroidery">Embroidery</option>
+                    <option value="sewing">Sewing</option>
+                    <option value="drawing">Drawing</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpting">Sculpting</option>
+                </select>
+            </div>
+
+            <!-- employement div -->
+            <div>
+                <select class="filter-select" id="employment" name="employment">
+                    <option value="all">Employment Type</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="contract">Contract</option>
+                    <option value="internship">Internship</option>
+                    <option value="temporary">Temporary</option>
+                </select>
+            </div>
+
+            <!-- Locations div -->
+            <div>
+                <select class="filter-select" id="location" name="location">
+                    <option value="all">Location</option>
+                    <option value="remote">Remote</option>
+                    <option value="accra">Accra</option>
+                    <option value="kumasi">Kumasi</option>
+                    <option value="cape-coast">Cape Coast</option>
+                    <option value="tamale">Tamale</option>
+                    <option value="ho">Ho</option>
+                    <option value="sunyani">Sunyani</option>
+                    <option value="bolgatanga">Bolgatanga</option>
+                    <option value="koforidua">Koforidua</option>
+                    <option value="sekondi-takoradi">Sekondi-Takoradi</option>
+                </select>
+            </div>
+
+            <!-- Education level div -->
+            <div>
+                <select class="filter-select" id="eduation" name="education">
+                    <option value="all">Level of Education</option>
+                    <option value="none">None</option>
+                    <option value="high-school">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelors">Bachelors</option>
+                    <option value="masters">Masters</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <!-- /* ----------HEADING AFTER THE NAVBAR---- */ -->
     <header class="heading">
         <h1 class="header-title">
-            FIND YOUR <br> <span class="text">DREAM JOB</span> <br> WITH CRAFTCONNECT
+            FIND YOUR <br> DREAM JOB <br> WITH CRAFTCONNECT
+            <!-- FIND YOUR <br> <span class="text">DREAM JOB</span> <br> WITH CRAFTCONNECT -->
         </h1>
     </header>
      
@@ -68,75 +166,32 @@
            </div>
         </div>
     </div> -->
-    <div class="input-section">
+
+
+
+    <!-- /* -----The SEARCH BUTTON SECTION----- */ -->
+    
+    <div class="search-section">
         <input type="text" placeholder="Search for a Job" />
         <i class="fa-solid fa-magnifying-glass"></i>
         <button class="button1">Search</button>
     </div>
 
-    <div class="filter-box">
-        <div class="filter-dropdowwn">
-            <select class="filter-select" id="job-level" name="job-level">
-                <option value="all">Job levels</option>
-                <option value="entry">Entry Level</option>
-                <option value="intermediate">Intermediate Level</option>
-                <option value="senior">Senior Level</option>
-            </select>
-            <select class="filter-select" id="job-funtion" name="job-funtion">
-                <option value="all">Job Function</option>
-                <option value="braiding">Braiding</option>
-                <option value="knitting">Knitting</option>
-                <option value="weaving">Weaving</option>
-                <option value="crocheting">Crocheting</option>
-                <option value="embroidery">Embroidery</option>
-                <option value="sewing">Sewing</option>
-                <option value="drawing">Drawing</option>
-                <option value="painting">Painting</option>
-                <option value="sculpting">Sculpting</option>
-            </select>
-            <select class="filter-select" id="employment" name="employment">
-                <option value="all">Employment Type</option>
-                <option value="full-time">Full Time</option>
-                <option value="part-time">Part Time</option>
-                <option value="contract">Contract</option>
-                <option value="internship">Internship</option>
-                <option value="temporary">Temporary</option>
-            </select>
-            <select class="filter-select" id="location" name="location">
-                <option value="all">Location</option>
-                <option value="remote">Remote</option>
-                <option value="accra">Accra</option>
-                <option value="kumasi">Kumasi</option>
-                <option value="cape-coast">Cape Coast</option>
-                <option value="tamale">Tamale</option>
-                <option value="ho">Ho</option>
-                <option value="sunyani">Sunyani</option>
-                <option value="bolgatanga">Bolgatanga</option>
-                <option value="koforidua">Koforidua</option>
-                <option value="sekondi-takoradi">Sekondi-Takoradi</option>
-            </select>
-            <select class="filter-select" id="eduation" name="education">
-                <option value="all">Level of Education</option>
-                <option value="none">None</option>
-                <option value="high-school">High School</option>
-                <option value="diploma">Diploma</option>
-                <option value="bachelors">Bachelors</option>
-                <option value="masters">Masters</option>
-                <option value="phd">PhD</option>
-            </select>
-        </div>
-    </div>
 </section>
+
     
-        <h1 class="apply-header">
-            APPLY FOR JOBS
-        </h1>   
-        
-        <section class="job-list" id="jobs">
+    <!-- /* -----APPLY WORK READINGS---- */ -->
+    <div class="apply-header" >
+        <h1>APPLY FOR JOBS</h1>    
+    </div>
+
+    <!-------------- WORKING ON THE JOB LIST ----------------->
+
+    <section class="job-list" id="jobs">
             
            <div class="job-card">
                 <div class="job-card-header">
-                    <img src="{% static 'images/01.jpeg'}">
+                    <img src="{% static 'images/ob-title_images/software_development.webp'}">
 
                     <h3 class="job-card-title">{{job.jobtitle}}</h3>
                     <p class="job-card-company">{{job.company}}</p>
@@ -152,6 +207,8 @@
                     <button class="job-card-button">Apply</button>
                 </div>
             </div>
+
+            <!-- Job 2 -->
             <div class="job-card">
                 <div class="job-card-header">
                     <img src="{% static 'images/01.jpeg'}">
@@ -170,6 +227,8 @@
                     <button class="job-card-button">Apply</button>
                 </div>
             </div>
+
+            <!-- JOB -->
             <div class="job-card">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Weaving Instructor</h3>
