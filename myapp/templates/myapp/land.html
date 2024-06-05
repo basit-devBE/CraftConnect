@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <div class="page1">
     <header class="header1">
       <div class="logo1">
         <img
@@ -23,7 +24,10 @@
           alt="logo"
           class="logo"
         />
-        <h1>CraftConnect</h1>
+        <h1>
+          <a href="{% url 'land' %}" style="text-decoration: none">CraftConnect</a
+          >
+        </h1>
       </div>
       <div class="nalinks">
         <nav>
@@ -38,7 +42,7 @@
         <div class="login">
           <a href="{% url 'login' %}" class="login">Login</a>
           <a href="{% url 'signup' %}" class="signup">Sign Up</a>
-        </div>  
+        </div>
         <div>
           <button onclick="window.location.href='{% url 'postjob' %}'">
             POST A JOB
@@ -61,14 +65,128 @@
             <button class="button1">Search</button>
           </div>
         </div>
+        <!-- Button that leader to either sign in as an employer or employeee -->
+      
+        
       </div>
       <div class="herosection2">
         <img
-          src="{% static 'images/call-taxi-svgrepo-com.svg' %}"
+          src="{% static 'images/hi.svg' %}"
           alt="hero"
           class="heroimg"
+          id="hu"
         />
       </div>
+    </div>
     </section>
+
+    <!-- -----------------------------------        ------------------------------------ -->
+    <section class="">
+      <div class="part-1-section2">
+        <div class="team-image">
+          <img src="{% static 'images/animated.jpg' %}" alt="team image" class="animated" />
+        </div>
+
+        <div class="team-words">
+            <h1>LIVE YOUR DREAMS WHILES ON CAMPUS</h1> 
+            <!-- Paragraph 1 -->
+            <div class="words">
+                <div class="icons">
+                  <i class="fa fa-star"></i>
+                </div>
+                
+                <div>
+                  <h2>Advertise a role and recruit exceptional talent</h2>
+                  <p>Join our dynamic team and help us recruit exceptional talent for a thriving campus community!</p>
+                </div>
+            </div>
+
+            <!-- Paragraph 2 -->
+          <div  class="words">
+            <div class="icons">
+              <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h2>Join at no charge</h2>
+              <p>Join our dynamic team and help us recruit exceptional talent for a thriving campus community!</p>
+            </div>                       
+          </div>
+
+          <!-- Paragraph 3 -->
+          <div class="words">
+             <div class="icons">
+                <i class="fa fa-stop-circle" aria-hidden="true"></i> 
+              </div>
+              <div>
+                <h2>Collaborate with top talent at no extra cost.</h2>
+                <p>Join our dynamic team and help us recruit exceptional talent for a thriving campus community!</p>
+             </div>
+          </div>          
+        <div>
+             
+        
+          <!-- Buttons -->
+          <div>
+            <button class="btn1">Get Started</button>
+            <button class="btn2">Sign Up</button>
+          </div>
+         </div>
+      </div>
+      </div>
+
+      
+    </section>
+
+
+    <section class="testimonials" id="Testimonials">
+      <h1>What Our Students Say</h1>
+      <p>The are ..........</p>
+      <div class="row">
+          <div class="testimonials-cols">
+              <img src="{% static 'images/human2.jpg' %}" alt="image of a female" />
+              <div class="testimonials-text ">
+                  <p>
+                      "Delighted with my experience! The website made finding what I needed effortless, 
+                      and the customer service was exceptional. I'll definitely be back!</p>
+                  <h3>Basit</h3>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+              </div>
+          </div>
+          
+          
+          
+          
+          <div class="testimonials-cols">
+              <img src="{% static 'images/human1peg.jpeg' %}" alt="image of a female" />
+              <div class="testimonials-text ">
+                  <p>"Absolutely thrilled with my purchase! The website was user-friendly, and 
+                      the product exceeded my expectations. Thanks for an awesome experience!
+                  </p>
+                  <h3>Emmanuel</h3>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- contact Us -->
+  <section class="contact"  >
+    <h1>Contact us</h1>
+    <p>If dealing with any issues concening school applications
+    </p>
+
+    <a href="" class="hero-btn" id="Contacts">Contant Us</a>
+</section>
+
+
+
   </body>
 </html>
