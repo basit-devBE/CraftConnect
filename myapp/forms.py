@@ -19,3 +19,12 @@ class JobPostForm(ModelForm):
     class Meta:
         model = JobPost
         fields = ['jobtitle', 'jobdescription', 'joblocation', 'jobtype', 'jobfunction', 'jobeducation']
+
+    widgets = {
+        'jobtitle': forms.TextInput(attrs={'placeholder': 'Job title'}),
+        'jobdescription': forms.TextInput(attrs={'placeholder': 'Job description'}),
+        'joblocation': forms.TextInput(attrs={'placeholder': 'Location of job'}),
+        'jobtype': forms.TextInput(attrs={'placeholder': 'Job type'}),
+        'jobfunction': forms.TextInput(attrs={'placeholder': 'Job function'}),
+        'jobeducation': forms.TextInput(attrs={'placeholder': 'Minimum education requirement'}),
+    }
