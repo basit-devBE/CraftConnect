@@ -193,7 +193,9 @@
 
         <!-- Job list container -->
         <div class="job-lists" id="jobs" >
-            <div class="job-card">
+            <!-- Job 1 -->
+            <div class="job-card" data-title="Software Developer" data-company="Tech Solutions" data-type="Full Time" data-pay="$4000 - $6000" data-description="You will work in a collaborative environment, developing cutting-edge software solutions." data-location="New York, NY">
+            <!-- </div> -->
                 <div class="job-card-header">
                     <!-- Images should be at the company work description -->
                     <!-- <img src="{% static 'images/ob-title_images/software_development.webp'}"> -->
@@ -227,7 +229,7 @@
             </div>
 
             <!-- Job 2 -->
-            <div class="job-card">
+            <div class="job-card" data-title="KnittingInstructor" data-company="Knitty-Girtty"data-type="Part Time"data-pay="Ghc 1000- Ghc 1500"data-description="I mean who would not want to knit...."data-location="Accra">
                 <div class="job-card-header">
                     <!-- <img src="{% static 'images/01.jpeg'}"> -->
 
@@ -259,7 +261,7 @@
             </div>
 
             <!-- JOB -->
-            <div class="job-card">
+            <div class="job-card" data-title="Weaving Instructor" data-company="Weavers International"data-type="Full Time"data-pay="Ghc 1000- Ghc 2500"data-description="Weave our dresses for us and also help complete unfinished ones...."data-location="Accra">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Weaving Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
@@ -289,13 +291,12 @@
             </div>
 
             <!-- --------------- -->
-            <div class="job-card">
-                <div class="job-card-header">
-                    <!-- <img src="{% static 'images/01.jpeg'}"> -->
-                    <h3 class="job-card-title">Crocheting Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
+            <div class="job-card" data-title="Crocheting Instructor" data-company="CraftConnect"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="By taking this work opportunity, you will work in a remote environment that offers tuition...."data-location="Accra">
+                 <div class="job-card-header">
+                            <!-- <img src="{% static 'images/01.jpeg'}"> -->
+                            <h3 class="job-card-title">Crocheting</data-title=></h3>
+                            <p class="job-card-company">"CraftConnect"</p>
                 </div>
-
                 <!-- THe employer should give a summary of the work and it should be assign here -->
                 <div class="work-summary">
                     <div class="icon">
@@ -321,7 +322,7 @@
             </div>
 
             <!-- ---------------------------- -->
-            <div class="job-card">
+            <div class="job-card" data-title="Embroidery Instructor" data-company="Touch Embroids"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Teach students various embroidery techniques and help them create their own designs in a supportive environment."data-location="Accra">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Embroidery Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
@@ -349,10 +350,10 @@
                     <button class="job-card-button">Apply</button>
                 </div> -->
             </div>
-            <div class="job-card">
+            <div class="job-card" data-title="Sewing Instructor" data-company="Sewer-Hole"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Get the opportunity to work for our prestigious institution and learn more about sewing male and female dresses"data-location="Sekondi-Takoradi">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Sewing Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
+                    <p class="job-card-company">Sewer-Hole</p>
                 </div>
                 <!-- THe employer should give a summary of the work and it should be assign here -->
                 <div class="work-summary">
@@ -388,7 +389,7 @@
         </div>
 
         <!-- Container for APPLYING -->
-         <div class="apply-work">
+         <div class="apply-work" id="apply-job-section" style="display: none;">
                 <!-- Company's name, etc -->
                 <div class="company-info">
                     <h1>{{job.jobtitle}}</h1>
