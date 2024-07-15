@@ -487,6 +487,7 @@ h2 {
   min-width: 700px;
   border-radius: 10px;
   margin-bottom: 5px;
+  
 }
 .apply-work .work-description {
   border-radius: 3px;
@@ -638,3 +639,5 @@ h2 {
 .social-icons > a:hover {
   box-shadow: #fff;
 }
+
+
