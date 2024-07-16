@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/post.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/png" href="{% static '/images/hammer.svg' %}">
     <title>CraftConnect</title>
 </head>
 <body>
-    <
+    <div class="row mt-2 pb-2 w-100 h-100">
+        <h1 class="display-4 text-center mb-2 fw-bold">POST A JOB</h1>
+        <div class="col-lg-6">
+            <img src="{% static 'images/output.png' %}" alt="logo" class="w-100 h-100" />
+        </div>
+        <!-- <h1 class="display-5 fw-light text-center mx-4">POST JOB</h1> -->
+        <div class="col-lg-6">
+            <form method="post" action="{% url 'postjob' %}" class="form">
+              {% csrf_token %} 
+              <table class="table">
+                  {% for field in form %}
+                  <tr>
+                    <td>{{ field.label }}</td>
+                    <td>{{ field }}</td>
+                  </tr> 
+                   
+                  {% endfor %} 
+                  {{ form.errors }}
+    
+              </table>
+              <div class="w-100 justify-content-center">
+                <button type="submit" class="btn btn-secondary w-100">POST</button>
+              </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- <script is:inline src="https://unpkg.com/lucide@latest"></script>
+    <script is:inline>
+      lucide.createIcons();
+    </script> -->
 </body>
 </html>

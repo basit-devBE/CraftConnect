@@ -10,6 +10,9 @@ class JobPost(models.Model):
     jobfunction = models.CharField(max_length=50)
     jobeducation = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f'{self.jobtitle}'
+
 
 class Job(models.Model):
     jobtitle = models.CharField(max_length=100)
@@ -23,3 +26,4 @@ class Job(models.Model):
 
     def __str__(self):
         return self.jobtitle
+

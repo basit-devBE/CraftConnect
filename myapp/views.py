@@ -8,6 +8,7 @@ from myapp.forms import UserForm
 from django.contrib import messages
 from django.contrib.auth import login as auth_login,logout as auth_logout,authenticate
 from django.contrib.auth.decorators import login_required
+from myapp.forms import JobPostForm
 
 @login_required(login_url='login')
 def hello(request):
@@ -62,5 +63,20 @@ def logout(request):
 def land(request):
     return render(request, 'myapp/land.html')
 
+
+@login_required(login_url='login')
 def postjob(request):
-    return render(request, 'myapp/post.html')
+    
+    if request.method == "POST":
+        form = JobPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Job posted successfully!")
+            return redirect('hello')
+        
+    else:
+        form = JobPostForm()
+        context = {
+            "form": form
+        }
+        return render(request, 'myapp/post.html', context)

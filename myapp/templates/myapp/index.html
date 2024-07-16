@@ -21,41 +21,139 @@
 <body>
     <section class=" head-1">
    
-
         <nav class="navbar">
-            <!-- <h2 class="navbar-logo"><a href='#'>CraftConnect</a></h2> -->
-            <div class="logo1">
-            <img
-              src="{% static 'images/hammer-svgrepo-com.svg' %}"
-              alt="logo"
-              class="logo"
-            />
-            <h1>
-              <a href="{% url 'land' %}" >CraftConnect</a
-              >
-            </h1>
-          </div>
-        
-        <div class="nalinks">
-            <nav>
-                <ul class="lists">
-                    <li><a href="#">Homew</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <span style="color: rgb(138, 26, 26);">  {{username}} </span>
-              </ul>
-            </nav>
-          </div>
-          <div class="log1">
-            <div class="login">
-                <a href="{% url 'logout' %}" class="login">Logout</a>
-            </div>
-        </div>
-        </nav>
+
+            <!-- PUTTING LOGO AND LINKS IN A -->
+            <div class="logo-navlinks">
+                <div class="logo1">
+                    <img
+                    src="{% static 'images/hammer-svgrepo-com.svg' %}"
+                    alt="logo"
+                    class="logo"
+                    />
+                    <h1>
+                      <a href="{% url 'land' %}" >CraftConnect</a>
+                    </h1>
+                </div>
+            
+                <!-- ----------LINKS CONTAINER---------- -->
+                <div class="nalinks">
+                    <nav>
+                        <ul class="lists">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
     
+
+            </div>
+            <!-- -----------LOGO CONTAINER---------- -->
+
+         
+            <!-- -------SEARCH INPUT CONTAINER------ -->
+            <div class="input-section">
+                <input type="text" placeholder="Search for a Job" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- --------LOGOUT CONTAINER------- -->
+            <div class="log1">
+                <div class="login">
+                    <span style="color: rgb(138, 26, 26);">  {{request.user | capfirst}}  </span>
+                    <a href="{% url 'logout' %}" class="login">Logout</a>
+                </div>
+            </div>
+
+         
+
+
+        </nav>
+
+            <!-- -------FILTER SECTION --------->
+    <div class="filter-box">
+        <div class="filter-dropdown">
+            <!-- Putting all selection in a div container for easy adjustment or styling -->
+
+            <!-- Job level div -->
+            <div>
+                <select class="filter-select" id="job-level" name="job-level">
+                    <option value="all">Job levels</option>
+                    <option value="entry">Entry Level</option>
+                    <option value="intermediate">Intermediate Level</option>
+                    <option value="senior">Senior Level</option>
+                </select>
+            </div>
+
+            <!-- Job junction div -->
+            <div>
+                <select class="filter-select" id="job-funtion" name="job-funtion">
+                    <option value="all">Job Function</option>
+                    <option value="braiding">Braiding</option>
+                    <option value="knitting">Knitting</option>
+                    <option value="weaving">Weaving</option>
+                    <option value="crocheting">Crocheting</option>
+                    <option value="embroidery">Embroidery</option>
+                    <option value="sewing">Sewing</option>
+                    <option value="drawing">Drawing</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpting">Sculpting</option>
+                </select>
+            </div>
+
+            <!-- employement div -->
+            <div>
+                <select class="filter-select" id="employment" name="employment">
+                    <option value="all">Employment Type</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="contract">Contract</option>
+                    <option value="internship">Internship</option>
+                    <option value="temporary">Temporary</option>
+                </select>
+            </div>
+
+            <!-- Locations div -->
+            <div>
+                <select class="filter-select" id="location" name="location">
+                    <option value="all">Location</option>
+                    <option value="remote">Remote</option>
+                    <option value="accra">Accra</option>
+                    <option value="kumasi">Kumasi</option>
+                    <option value="cape-coast">Cape Coast</option>
+                    <option value="tamale">Tamale</option>
+                    <option value="ho">Ho</option>
+                    <option value="sunyani">Sunyani</option>
+                    <option value="bolgatanga">Bolgatanga</option>
+                    <option value="koforidua">Koforidua</option>
+                    <option value="sekondi-takoradi">Sekondi-Takoradi</option>
+                </select>
+            </div>
+
+            <!-- Education level div -->
+            <div>
+                <select class="filter-select" id="eduation" name="education">
+                    <option value="all">Level of Education</option>
+                    <option value="none">None</option>
+                    <option value="high-school">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelors">Bachelors</option>
+                    <option value="masters">Masters</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <!-- /* ----------HEADING AFTER THE NAVBAR---- */ -->
     <header class="heading">
         <h1 class="header-title">
-            FIND YOUR <br> <span class="text">DREAM JOB</span> <br> WITH CRAFTCONNECT
+            FIND YOUR <br> DREAM JOB <br> WITH CRAFTCONNECT
+            <!-- FIND YOUR <br> <span class="text">DREAM JOB</span> <br> WITH CRAFTCONNECT -->
         </h1>
     </header>
      
@@ -68,78 +166,55 @@
            </div>
         </div>
     </div> -->
-    <div class="input-section">
+
+
+
+    <!-- /* -----The SEARCH BUTTON SECTION----- */ -->
+    
+    <div class="search-section">
         <input type="text" placeholder="Search for a Job" />
         <i class="fa-solid fa-magnifying-glass"></i>
         <button class="button1">Search</button>
     </div>
 
-    <div class="filter-box">
-        <div class="filter-dropdowwn">
-            <select class="filter-select" id="job-level" name="job-level">
-                <option value="all">Job levels</option>
-                <option value="entry">Entry Level</option>
-                <option value="intermediate">Intermediate Level</option>
-                <option value="senior">Senior Level</option>
-            </select>
-            <select class="filter-select" id="job-funtion" name="job-funtion">
-                <option value="all">Job Function</option>
-                <option value="braiding">Braiding</option>
-                <option value="knitting">Knitting</option>
-                <option value="weaving">Weaving</option>
-                <option value="crocheting">Crocheting</option>
-                <option value="embroidery">Embroidery</option>
-                <option value="sewing">Sewing</option>
-                <option value="drawing">Drawing</option>
-                <option value="painting">Painting</option>
-                <option value="sculpting">Sculpting</option>
-            </select>
-            <select class="filter-select" id="employment" name="employment">
-                <option value="all">Employment Type</option>
-                <option value="full-time">Full Time</option>
-                <option value="part-time">Part Time</option>
-                <option value="contract">Contract</option>
-                <option value="internship">Internship</option>
-                <option value="temporary">Temporary</option>
-            </select>
-            <select class="filter-select" id="location" name="location">
-                <option value="all">Location</option>
-                <option value="remote">Remote</option>
-                <option value="accra">Accra</option>
-                <option value="kumasi">Kumasi</option>
-                <option value="cape-coast">Cape Coast</option>
-                <option value="tamale">Tamale</option>
-                <option value="ho">Ho</option>
-                <option value="sunyani">Sunyani</option>
-                <option value="bolgatanga">Bolgatanga</option>
-                <option value="koforidua">Koforidua</option>
-                <option value="sekondi-takoradi">Sekondi-Takoradi</option>
-            </select>
-            <select class="filter-select" id="eduation" name="education">
-                <option value="all">Level of Education</option>
-                <option value="none">None</option>
-                <option value="high-school">High School</option>
-                <option value="diploma">Diploma</option>
-                <option value="bachelors">Bachelors</option>
-                <option value="masters">Masters</option>
-                <option value="phd">PhD</option>
-            </select>
-        </div>
-    </div>
 </section>
+
     
-        <h1 class="apply-header">
-            APPLY FOR JOBS
-        </h1>   
-        
-        <section class="job-list" id="jobs">
-            
-           <div class="job-card">
+    <!-- /* -----APPLY WORK READINGS---- */ -->
+    <div class="apply-header" >
+        <h1>APPLY FOR JOBS</h1>    
+    </div>
+
+    <!-------------- WORKING ON THE JOB LIST ----------------->
+
+    <section class="job-list" >
+        <!-- SEPEARATING THE SECTION INTO JOB-LIST  AND APPLY -->
+         
+
+        <!-- Job list container -->
+        <div class="job-lists" id="jobs" >
+            <!-- Job 1 -->
+            <div class="job-card" data-title="Software Developer" data-company="Tech Solutions" data-type="Full Time" data-pay="$4000 - $6000" data-description="You will work in a collaborative environment, developing cutting-edge software solutions." data-location="New York, NY">
+            <!-- </div> -->
                 <div class="job-card-header">
-                    <img src="{% static 'images/01.jpeg'}">
+                    <!-- Images should be at the company work description -->
+                    <!-- <img src="{% static 'images/ob-title_images/software_development.webp'}"> -->
 
                     <h3 class="job-card-title">{{job.jobtitle}}</h3>
-                    <p class="job-card-company">{{job.company}}</p>
+                    <p class="job-card-company">{{job.company}} <br>(remote/ not) {{job.joblocation}}</p>
+                    
+                </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                 
                 </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">{{job.joblocation}}</a>
@@ -148,16 +223,30 @@
                     <a href='#' class="job-card-function">{{job.jobdescription}}</a>
                     <a href='#' class="job-card-education">{{job.jobdescription}}</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>
+                </div> -->
             </div>
-            <div class="job-card">
+
+            <!-- Job 2 -->
+            <div class="job-card" data-title="KnittingInstructor" data-company="Knitty-Girtty"data-type="Part Time"data-pay="Ghc 1000- Ghc 1500"data-description="I mean who would not want to knit...."data-location="Accra">
                 <div class="job-card-header">
-                    <img src="{% static 'images/01.jpeg'}">
+                    <!-- <img src="{% static 'images/01.jpeg'}"> -->
 
                     <h3 class="job-card-title">Knitting Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
+                </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                    
                 </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">Accra</a>
@@ -166,15 +255,29 @@
                     <a href='#' class="job-card-function">Knitting</a>
                     <a href='#' class="job-card-education">High School</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>
+                </div> -->
             </div>
-            <div class="job-card">
+
+            <!-- JOB -->
+            <div class="job-card" data-title="Weaving Instructor" data-company="Weavers International"data-type="Full Time"data-pay="Ghc 1000- Ghc 2500"data-description="Weave our dresses for us and also help complete unfinished ones...."data-location="Accra">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Weaving Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
                 </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                    
+                                </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">Accra</a>
                     <a href='#' class="job-card-type">Full Time</a>
@@ -182,16 +285,30 @@
                     <a href='#' class="job-card-function">Weaving</a>
                     <a href='#' class="job-card-education">High School</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>
+                </div> -->
             </div>
-            <div class="job-card">
-                <div class="job-card-header">
-                    <img src="{% static 'images/01.jpeg'}">
-                    <h3 class="job-card-title">Crocheting Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
+
+            <!-- --------------- -->
+            <div class="job-card" data-title="Crocheting Instructor" data-company="CraftConnect"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="By taking this work opportunity, you will work in a remote environment that offers tuition...."data-location="Accra">
+                 <div class="job-card-header">
+                            <!-- <img src="{% static 'images/01.jpeg'}"> -->
+                            <h3 class="job-card-title">Crocheting</data-title=></h3>
+                            <p class="job-card-company">"CraftConnect"</p>
                 </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                    
+                                </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">Accra</a>
                     <a href='#' class="job-card-type">Full Time</a>
@@ -199,14 +316,28 @@
                     <a href='#' class="job-card-function">Crocheting</a>
                     <a href='#' class="job-card-education">High School</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>   
+                </div>    -->
             </div>
-            <div class="job-card">
+
+            <!-- ---------------------------- -->
+        <div class="job-card" data-title="Embroidery Instructor" data-company="Touch Embroids"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Teach students various embroidery techniques and help them create their own designs in a supportive environment."data-location="Accra">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Embroidery Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
+                </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                    
                 </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">Accra</a>
@@ -215,14 +346,26 @@
                     <a href='#' class="job-card-function">Embroidery</a>
                     <a href='#' class="job-card-education">High School</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>
+                </div> -->
             </div>
-            <div class="job-card">
+            <div class="job-card" data-title="Sewing Instructor" data-company="Sewer-Hole"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Get the opportunity to work for our prestigious institution and learn more about sewing male and female dresses"data-location="Sekondi-Takoradi">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Sewing Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
+                    <p class="job-card-company">Sewer-Hole</p>
+                </div>
+                <!-- THe employer should give a summary of the work and it should be assign here -->
+                <div class="work-summary">
+                    <div class="icon">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </div>
+                    <div class="summary">
+                        <p>By taking this work opportunity, you will work in a
+                            remote environment that offers tuition....
+                        </p> 
+                    </div>
+                                    
                 </div>
                 <div class="job-card-body">
                     <a href='#' class="job-card-location">Accra</a>
@@ -231,9 +374,9 @@
                     <a href='#' class="job-card-function">Sewing</a>
                     <a href='#' class="job-card-education">High School</a>
                 </div>
-                <div class="job-card-footer">
+                <!-- <div class="job-card-footer">
                     <button class="job-card-button">Apply</button>
-                </div>
+                </div> -->
             </div>
             
                 <button class="more-jobs">
@@ -242,7 +385,62 @@
                 <h1 id="test">
                     hi
                 </h1>
+
+        </div>
+
+        <!-- Container for APPLYING -->
+         <div class="apply-work" id="apply-job-section" style="display: none;">
+                <!-- Company's name, etc -->
+                <div class="company-info">
+                    <h1>{{job.jobtitle}}</h1>
+                    <p>type of work(remote/ not)</p>
+                    <p><a href='#' class="">{{job.jobtype}}</a> </p>
+                    <p>To apply, you have to create an account</p>
+
+                    <div class="job-card-footer">
+                        <button class="job-card-button">Apply now</button>
+                    </div>
+
+
+                </div>
+
+                <!-- Work description as posted by the employer -->
+                <div class="work-description">
+                    <!-- Job details -->
+                    <div>
+                        <h1>Job Details<h1>
+                        <div class="details">
+                            <p>Pay</p>
+                            <P>Ghc 1000- Ghc 1500</P>
+                        </div>
+                        <div class="details">
+                            <p>Job Type</p>
+                            <P>Fulltime</P>
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <p>Job Description</p>
+                            <P>F............</P>
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <p>Job Qualification</p>
+                            <P>F............</P>
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <p>Job location</p>
+                            <P>KNUST</P>
+                        </div>
+                    
+                    </div>
+
+                </div>
+         </div>
+            
+          
     </section>
+    <!-- ----------------------------------------------------------------------------------- -->
 
     <section class="join">
         <div class="join-detail">
