@@ -376,7 +376,8 @@ h1 {
   max-width: 100%; 
   position: absolute;
   top: 25px;
-  background: white;
+  /* background: rgb(104, 64, 64); */
+  background-color: rgba(255, 250, 250, 0.5);
   z-index: 100;
 }
 .result-box ul {

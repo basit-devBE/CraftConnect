@@ -1,43 +1,54 @@
 // Containers
 const jobCards = document.querySelectorAll(".job-card");
+const resultsBox = document.querySelector(".result-box");
+const inputBox = document.getElementById("input-box");
+const titleNames = document.querySelectorAll(".job-card-title");
+const allTitleNameArr = [];
+const all = titleNames.forEach((title) => {
+  return allTitleNameArr.push(title.innerHTML);
+});
 
-// const jobHearder = document
 
-// classes for the job card
-// const jobCardTitle = document.querySelector(".job-card-title");
 
+
+/////////////////////////////////////////////////////////////////////////////
+// ----Search Button-----------------------
+
+inputBox.addEventListener("keyup", function () {
+  let result = [];
+  let input = inputBox.value;
+  if (input.length) {
+    // console.log("hi");
+    result = allTitleNameArr.filter((keyword) => {
+      return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(result);
+  }
+  display(result);
+  if (!result.length) {
+    resultsBox.innerHTML = "";
+  }
+});
+
+const display = function (result) {
+  const content = result.map((list) => {
+    return "<li onclick=selectInput(this)>" + list + "<li>";
+  });
+  resultsBox.innerHTML = "<ul>" + content.join("") + "<ul>";
+};
+
+const selectInput = function (list) {
+  inputBox.value = list.innerHTML;
+  resultsBox.innerHTML = "";
+};
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
   const moreJobsButton = document.getElementById("more-jobs");
   const testElement = document.getElementById("test");
-
-  // moreJobsButton.addEventListener("click", function () {
-  //   testElement.style.display = "none";
-  // });
 });
-
-// jobCards.forEach(function (jobCard) {
-//   jobCard.addEventListener("click", function (e) {
-//     const clicked = e.target.closest(".job-lists");
-//     console.log(clicked);
-
-//   });
-// });
-
-// document.querySelectorAll('.job-card').forEach(function(card) {
-//   const title = card.querySelector('.job-card-title').textContent.trim();
-//   const company = card.querySelector('.job-card-company').textContent.trim();
-//   const type = card.querySelector('.job-card-type').textContent.trim();
-//   const pay = card.querySelector('.job-card-pay').textContent.trim();
-//   const description = card.querySelector('.work-summary .summary p').textContent.trim();
-//   const location = card.querySelector('.job-card-location').textContent.trim();
-
-//   card.setAttribute('data-title', title);
-//   card.setAttribute('data-company', company);
-//   card.setAttribute('data-type', type);
-//   card.setAttribute('data-pay', pay);
-//   card.setAttribute('data-description', description);
-//   card.setAttribute('data-location', location);
-// });
 
 const applyWorkSection = document.getElementById("apply-job-section");
 document.querySelectorAll(".job-card").forEach(function (card) {
@@ -66,30 +77,8 @@ document.querySelectorAll(".job-card").forEach(function (card) {
     const jobCardEducation = clicked
       .querySelector(".job-card-education")
       .textContent.trim();
-
-    // const
-    // if (again) console.log("hi");
-    // const Title = e.target.closest("job-card-title");
     console.log(clicked);
-
-    // const title = jobCardTitle;
-    // console.log(title);
-    // const company = jobCardCompany;
-    // console.log(company);
-    // const type = card.getAttribute("data-type");
     const pay = card.getAttribute("data-pay");
-    // const description = card.getAttribute("data-description");
-    // const location = card.getAttribute("data-location");
-    // if (
-    //   applyWorkSection.style.display == "none" ||
-    //   applyWorkSection.style.display === ""
-    // ) {
-    //   applyWorkSection.style.display = "block";
-    // } else {
-    //   applyWorkSection.style.display = "none";
-    // }
-
-    // applyWorkSection.style.display=="none" ? "block" : "none";
     applyWorkSection.style.display =
       applyWorkSection.style.display === "none" ? "block" : "none";
 
