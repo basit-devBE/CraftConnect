@@ -53,10 +53,10 @@
 
          
             <!-- -------SEARCH INPUT CONTAINER------ -->
-            <div class="input-section">
-                <input type="text" placeholder="Search for a Job" />
+            <!-- <div class="input-section">
+                <input type="text" placeholder="Search for a Job"  autocomplete="off"/>
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            </div> -->
 
             <!-- --------LOGOUT CONTAINER------- -->
             <div class="log1">
@@ -170,12 +170,28 @@
 
 
     <!-- /* -----The SEARCH BUTTON SECTION----- */ -->
+     <div class="search-section" >
+        <div class="row-search">
+            <input type="text" placeholder="Search for a Joeb" autocomplete="off" id="input-box" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="button1">Search</button>
+        </div>
+        <div class="result-box" >
+            <ul>
+                <li>hu</li>
+                <li>hu</li>
+                <li>hu</li>
+                <li>hu</li>
+                <li>hu</li>
+                <li>hu</li>
+                <li>hu</li>
+            </ul>
+
+        </div>
+
+     </div>
     
-    <div class="search-section">
-        <input type="text" placeholder="Search for a Job" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <button class="button1">Search</button>
-    </div>
+
 
 </section>
 
@@ -194,14 +210,14 @@
         <!-- Job list container -->
         <div class="job-lists" id="jobs" >
             <!-- Job 1 -->
-            <div class="job-card" data-title="Software Developer" data-company="Tech Solutions" data-type="Full Time" data-pay="$4000 - $6000" data-description="You will work in a collaborative environment, developing cutting-edge software solutions." data-location="New York, NY">
+            <div class="job-card" data-pay="$4000 - $6000">
             <!-- </div> -->
                 <div class="job-card-header">
                     <!-- Images should be at the company work description -->
                     <!-- <img src="{% static 'images/ob-title_images/software_development.webp'}"> -->
 
-                    <h3 class="job-card-title">{{job.jobtitle}}</h3>
-                    <p class="job-card-company">{{job.company}} <br>(remote/ not) {{job.joblocation}}</p>
+                    <h3 class="job-card-title" data-title="title">{{job.jobtitle}}</h3>
+                    <p class="job-card-company" data-company="">{{job.company}} <br>(remote/ not) {{job.joblocation}}</p>
                     
                 </div>
                 <!-- THe employer should give a summary of the work and it should be assign here -->
@@ -209,8 +225,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>
@@ -229,7 +245,7 @@
             </div>
 
             <!-- Job 2 -->
-            <div class="job-card" data-title="KnittingInstructor" data-company="Knitty-Girtty"data-type="Part Time"data-pay="Ghc 1000- Ghc 1500"data-description="I mean who would not want to knit...."data-location="Accra">
+            <div class="job-card"data-pay="Ghc 1000- Ghc 1500">
                 <div class="job-card-header">
                     <!-- <img src="{% static 'images/01.jpeg'}"> -->
 
@@ -241,8 +257,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>
@@ -261,7 +277,7 @@
             </div>
 
             <!-- JOB -->
-            <div class="job-card" data-title="Weaving Instructor" data-company="Weavers International"data-type="Full Time"data-pay="Ghc 1000- Ghc 2500"data-description="Weave our dresses for us and also help complete unfinished ones...."data-location="Accra">
+            <div class="job-card"data-pay="Ghc 1000- Ghc 2500">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Weaving Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
@@ -271,8 +287,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>
@@ -291,7 +307,7 @@
             </div>
 
             <!-- --------------- -->
-            <div class="job-card" data-title="Crocheting Instructor" data-company="CraftConnect"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="By taking this work opportunity, you will work in a remote environment that offers tuition...."data-location="Accra">
+            <div class="job-card"data-pay="Ghc 1000- Ghc 1500">
                  <div class="job-card-header">
                             <!-- <img src="{% static 'images/01.jpeg'}"> -->
                             <h3 class="job-card-title">Crocheting</data-title=></h3>
@@ -302,8 +318,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>
@@ -322,7 +338,7 @@
             </div>
 
             <!-- ---------------------------- -->
-        <div class="job-card" data-title="Embroidery Instructor" data-company="Touch Embroids"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Teach students various embroidery techniques and help them create their own designs in a supportive environment."data-location="Accra">
+        <div class="job-card" data-pay="Ghc 1000- Ghc 1500">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Embroidery Instructor</h3>
                     <p class="job-card-company">CraftConnect</p>
@@ -332,8 +348,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>
@@ -350,7 +366,7 @@
                     <button class="job-card-button">Apply</button>
                 </div> -->
             </div>
-            <div class="job-card" data-title="Sewing Instructor" data-company="Sewer-Hole"data-type="Full Time"data-pay="Ghc 1000- Ghc 1500"data-description="Get the opportunity to work for our prestigious institution and learn more about sewing male and female dresses"data-location="Sekondi-Takoradi">
+            <div class="job-card" data-pay="Ghc 1000- Ghc 1500">
                 <div class="job-card-header">
                     <h3 class="job-card-title">Sewing Instructor</h3>
                     <p class="job-card-company">Sewer-Hole</p>
@@ -360,8 +376,8 @@
                     <div class="icon">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
                     </div>
-                    <div class="summary">
-                        <p>By taking this work opportunity, you will work in a
+                    <div >
+                        <p class="summary">By taking this work opportunity, you will work in a
                             remote environment that offers tuition....
                         </p> 
                     </div>

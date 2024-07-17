@@ -60,42 +60,41 @@ h1 {
 }
 
 /* -----The SEARCH INPUT ----- */
-.input-section {
-  /* background: red; */
+/* .input-section {
+
   display: flex;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  /* margin-top: 20px; */
+
   height: 5px;
   margin: auto;
   width: auto;
-  /* max-width: 350px; */
-  /* max-width: 100%; */
-  position: relative;
-  /* margin-right: 0px; */
-}
 
-.input-section input:first-child {
+  position: relative;
+  
+} */
+
+/* .input-section input:first-child {
   display: inline-block;
   width: 100%;
   border-radius: 20px;
   border: 1px solid #848282;
   padding: 10px 80px 10px 35px;
   outline: none;
-  /* font-size: 20px; */
+  
   font-style: italic;
   box-shadow: 0px 0px 1px #3a3c3b, 0px 0px 1px #717578;
   background-color: rgba(255, 255, 255, 0.5);
-}
-.input-section i {
+} */
+/* .input-section i {
   position: absolute;
-  left: 10px; /* Adjust this value to position the icon */
-  color: black;
+  left: 10px; Adjust this value to position the icon */
+/* color: black;
   top: 50%;
-  transform: translateY(-50%);
-  /* font-size: 20px; */
-}
+  transform: translateY(-50%); */
+/* font-size: 20px; */
+/* } */
 
 .logo-navlinks {
   display: flex;
@@ -242,16 +241,10 @@ h1 {
   display: flex;
   justify-content: flex-start;
   margin-top: -10px;
-  /* background-color: #931c20; */
-  /* width: 100%; */
-  /* border-bottom: 1px solid var(--labelColor); */
-  /* justify-content: flex-start; */
-  /* flex-wrap: wrap; */
   gap: 0.3rem;
 }
 
 .filter-select {
-  /* border: none; */
   border-radius: 10px;
   padding: 0.2rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -290,18 +283,55 @@ h1 {
 
 /* ------THE REST ARE AT THE NAVBAR SECTION------- */
 .search-section {
-  display: flex;
-  align-items: center;
+  /* background: rgb(213, 58, 58);
+  background-color: red; */
+  position: relative;
+  /* width: 800px;
+  max-width: 100%; */
+  /* display: block; */
+  /* display: flex; */
+  /* flex: 1; */
+  /* align-items: center;
   justify-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin: auto;
+  margin-top: 20px; */
+  /* margin: auto; */
+  /* position: absolute; */
+  top: 10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 800px;
   max-width: 100%;
-  position: relative;
+  background: white;
 }
 
-.search-section input:first-child {
+.search-section .row-search {
+  /* display: flex;
+  /* flex: 1; */
+  /* align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 20px; */
+  /* margin: auto; */
+  /* width: 800px; */
+  /* max-width: 100%; */
+  /* position: relative;  */
+  position: absolute;
+  /* top: 20px; Adjust as needed */
+  /* left: 50%; */
+  /* transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 800px;
+  max-width: 100%; 
+  background: blue;
+}
+
+.search-section .row-search input:first-child {
   display: inline-block;
   width: 100%;
   border-radius: 20px;
@@ -312,7 +342,7 @@ h1 {
   font-style: italic;
   box-shadow: 0px 0px 1px #3a3c3b, 0px 0px 1px #717578;
 }
-.search-section i {
+.search-section .row-search i {
   position: absolute;
   left: 10px; /* Adjust this value to position the icon */
   color: black;
@@ -321,7 +351,7 @@ h1 {
   font-size: 20px;
 }
 
-.search-section .button1 {
+.search-section .row-search .button1 {
   display: inline-block;
   position: absolute;
   background-color: blue;
@@ -336,12 +366,37 @@ h1 {
   box-shadow: 0px 0px 2px #82c5a9, 0px 0px 2px #77b9ef;
 }
 
-.search-section .button1:hover {
+.search-section .row-search .button1:hover {
   background-color: #000000;
+}
+
+.result-box {
+  
+  width: 800px;
+  max-width: 100%; 
+  position: absolute;
+  top: 25px;
+  background: white;
+  z-index: 100;
+}
+.result-box ul {
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+}
+.result-box ul li {
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.result-box ul li:hover {
+  background-color: aquamarine;
 }
 
 /* -----APPLY WORK READINGS(HEADING)---- */
 .apply-header {
+  /* background: greenyellow; */
   margin-top: -60px;
   justify-content: center;
   align-items: center;
@@ -487,7 +542,6 @@ h2 {
   min-width: 700px;
   border-radius: 10px;
   margin-bottom: 5px;
-  
 }
 .apply-work .work-description {
   border-radius: 3px;
@@ -639,5 +693,3 @@ h2 {
 .social-icons > a:hover {
   box-shadow: #fff;
 }
-
-
