@@ -1,2 +1,6 @@
 /env/
 *.sqlite3
+*.pyc
+*.log
+*.swp
+*.swo
