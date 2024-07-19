@@ -12,18 +12,13 @@ from myapp.forms import JobPostForm
 
 @login_required(login_url='login')
 def hello(request):
+    query = request.GET.get('query') if request.method == 'GET' else ''
+    if query:
+        jobs = Job.objects.filter(user=request.user)
+    else:
+        jobs = Job.objects.all()
 
-    job1 = Job()
-    job1.jobtitle = "Software Developer"
-    job1.jobdescription = "Develop software"
-    job1.joblocation = "New York"
-    job1.jobtype = "Full-time"
-    job1.jobfunction = "Software Development"
-    job1.jobeducation = "Bachelor's Degree"
-    job1.joblevel = "Entry Level"
-    job1.company = "Google"
-
-    return render(request, "myapp/index.html", {"job": job1})
+    return render(request, "myapp/index.html", {'jobs':jobs})
 
 
 def signup(request):
@@ -38,6 +33,10 @@ def signup(request):
         "form": form
     }
     return render(request, 'myapp/signup.html', context)
+
+
+def apply(request):
+    return render(request, 'myapp/apply.html')
 
 
 def login(request):

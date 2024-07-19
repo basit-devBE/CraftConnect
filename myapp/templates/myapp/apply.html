@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/apply.css' %}">
+</head>
+<body>
+    <h1>Job Application From</h1>
+    <p>Please Fill Out the Form Below to Submit You JOb Application!</p>
+    <hr>
+    <!--  -->
+    <div class="details">
+        <div class="name">
+            <label>Name</label>
+            <input type="text" required>
+        </div>
+        <div>
+            <div class="E-mail">
+                <label>E-mail</label>
+                <input type="text" placeholder="eg. myname@example.com" required>
+            </div>
+            <div class="Phone_Number">
+                <label>Phone Number</label>
+                <input type="text" placeholder="(000) 000-0000" required>
+            </div>
+        </div>
+        <!--  -->
+        <div>
+            <div class="Applied-Position">
+                <label>Applied Position</label>
+                <input type="text" />
+
+            </div>
+            <div class="Earliest-Possible">
+                <label>Earliest Possible Start Date</label>
+                <input type="date">
+            </div>
+        </div>
+
+    </div>
+    <!--  -->
+    <div>
+        <div class="Preferred_Interview"></div>
+        <div class="time"></div>
+    </div>
+    <!--  -->
+    <div>
+        <h3>Cover Letter</h3>
+        <input type="text">
+    </div>
+    <!--  -->
+    <div>
+        <h3>Upload Resume</h3>
+        <input type="file">
+    </div>
+    <!--  -->
+    <div>
+        <h3>Any Other Documents to Upload</h3>
+        <input type="file">
+        <p>you can share certicates, diplomas etc.</p>
+    </div>
+    <!--  -->
+    <button>Apply</button>
+
+    <!--  -->
+
+    
+</body>
+</html>

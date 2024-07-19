@@ -2,7 +2,7 @@ from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import JobPost
+from .models import JobPost, Job
 
 class UserForm(UserCreationForm):
     class Meta:
@@ -17,8 +17,9 @@ class UserForm(UserCreationForm):
 
 class JobPostForm(ModelForm):
     class Meta:
-        model = JobPost
-        fields = ['jobtitle', 'jobdescription', 'joblocation', 'jobtype', 'jobfunction', 'jobeducation']
+        model = Job
+        fields =  '__all__'
+        exclude = ['posted_date']
 
     widgets = {
         'jobtitle': forms.TextInput(attrs={'placeholder': 'Job title'}),

@@ -8,9 +8,6 @@ const all = titleNames.forEach((title) => {
   return allTitleNameArr.push(title.innerHTML);
 });
 
-
-
-
 /////////////////////////////////////////////////////////////////////////////
 // ----Search Button-----------------------
 
@@ -42,7 +39,6 @@ const selectInput = function (list) {
   resultsBox.innerHTML = "";
 };
 /////////////////////////////////////////////////////////////////////////////
-
 
 /////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,7 +85,7 @@ document.querySelectorAll(".job-card").forEach(function (card) {
         <p>${jobCardType}</p>
         <p>To apply, you have to create an account</p>
         <div class="job-card-footer">
-          <button class="job-card-button">Apply now</button>
+          <a href="{% url 'apply' %}" ><button class="job-card-button">Apply now</button> </a> 
         </div>
       </div>
       <div class="work-description">

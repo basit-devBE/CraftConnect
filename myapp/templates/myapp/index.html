@@ -198,7 +198,10 @@
     
     <!-- /* -----APPLY WORK READINGS---- */ -->
     <div class="apply-header" >
-        <h1>APPLY FOR JOBS</h1>    
+        <h1>APPLY FOR JOBS <span style="float: inline-end">
+            <a href="{% url 'hello' %}?query='my_posts'">My Job Posts</a>
+            </span>
+        </h1>    
     </div>
 
     <!-------------- WORKING ON THE JOB LIST ----------------->
@@ -209,198 +212,50 @@
 
         <!-- Job list container -->
         <div class="job-lists" id="jobs" >
-            <!-- Job 1 -->
-            <div class="job-card" data-pay="$4000 - $6000">
-            <!-- </div> -->
-                <div class="job-card-header">
-                    <!-- Images should be at the company work description -->
-                    <!-- <img src="{% static 'images/ob-title_images/software_development.webp'}"> -->
-
-                    <h3 class="job-card-title" data-title="title">{{job.jobtitle}}</h3>
-                    <p class="job-card-company" data-company="">{{job.company}} <br>(remote/ not) {{job.joblocation}}</p>
-                    
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                 
-                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">{{job.joblocation}}</a>
-                    <a href='#' class="job-card-type">{{job.jobtype}}</a>
-                    <a href='#' class="job-card-level">{{job.joblevel}}</a>
-                    <a href='#' class="job-card-function">{{job.jobdescription}}</a>
-                    <a href='#' class="job-card-education">{{job.jobdescription}}</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div> -->
-            </div>
-
-            <!-- Job 2 -->
-            <div class="job-card"data-pay="Ghc 1000- Ghc 1500">
-                <div class="job-card-header">
-                    <!-- <img src="{% static 'images/01.jpeg'}"> -->
-
-                    <h3 class="job-card-title">Knitting Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                    
-                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">Accra</a>
-                    <a href='#' class="job-card-type">Full Time</a>
-                    <a href='#' class="job-card-level">Entry Level</a>
-                    <a href='#' class="job-card-function">Knitting</a>
-                    <a href='#' class="job-card-education">High School</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div> -->
-            </div>
-
             <!-- JOB -->
-            <div class="job-card"data-pay="Ghc 1000- Ghc 2500">
-                <div class="job-card-header">
-                    <h3 class="job-card-title">Weaving Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                    
-                                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">Accra</a>
-                    <a href='#' class="job-card-type">Full Time</a>
-                    <a href='#' class="job-card-level">Entry Level</a>
-                    <a href='#' class="job-card-function">Weaving</a>
-                    <a href='#' class="job-card-education">High School</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div> -->
-            </div>
-
-            <!-- --------------- -->
-            <div class="job-card"data-pay="Ghc 1000- Ghc 1500">
+             
+             {% for job in jobs reversed %}
+             <div class="job-card">
                  <div class="job-card-header">
-                            <!-- <img src="{% static 'images/01.jpeg'}"> -->
-                            <h3 class="job-card-title">Crocheting</data-title=></h3>
-                            <p class="job-card-company">"CraftConnect"</p>
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                    
-                                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">Accra</a>
-                    <a href='#' class="job-card-type">Full Time</a>
-                    <a href='#' class="job-card-level">Entry Level</a>
-                    <a href='#' class="job-card-function">Crocheting</a>
-                    <a href='#' class="job-card-education">High School</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div>    -->
-            </div>
+                     <h3 class="job-card-title">{{job.jobtitle}} <span style="float: inline-end; font-size: 15px;">Ghc {{job.jobpay_min}}  -  Ghc {{job.jobpay_max}}</span></h3>
+                     <p class="job-card-company">{{job.jobcompany}}</p>
+                 </div>
+                 <!-- THe employer should give a summary of the work and it should be assign here -->
+                 <div class="work-summary">
+                     <div class="icon">
+                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                     </div>
+                     <div >
+                         <p class="summary"> {{job.jobdescription}}
+                         </p> 
+                     </div>
+                                     
+                                 </div>
+                 <div class="job-card-body">
+                     <a href='#' class="job-card-location">{{job.joblocation}}</a>
+                     <a href='#' class="job-card-type">{{job.jobtype}}</a>
+                     <a href='#' class="job-card-level">{{job.joblevel}}</a>
+                     <a href='#' class="job-card-function">{{job.jobfunction}}</a>
+                     <a href='#' class="job-card-education">{{job.jobeducation}}</a>
+                 </div>
+                 <div class="job-card-footer">
+                     <button class="job-card-button" onclick="window.location.href='{% url 'apply' %}'">Apply</button>
+                 </div>
+                 <div style="margin-top: 8px;">
+                    <i>Posted {{job.posted_date | timesince}} ago</i>
 
-            <!-- ---------------------------- -->
-        <div class="job-card" data-pay="Ghc 1000- Ghc 1500">
-                <div class="job-card-header">
-                    <h3 class="job-card-title">Embroidery Instructor</h3>
-                    <p class="job-card-company">CraftConnect</p>
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                    
-                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">Accra</a>
-                    <a href='#' class="job-card-type">Full Time</a>
-                    <a href='#' class="job-card-level">Entry Level</a>
-                    <a href='#' class="job-card-function">Embroidery</a>
-                    <a href='#' class="job-card-education">High School</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div> -->
-            </div>
-            <div class="job-card" data-pay="Ghc 1000- Ghc 1500">
-                <div class="job-card-header">
-                    <h3 class="job-card-title">Sewing Instructor</h3>
-                    <p class="job-card-company">Sewer-Hole</p>
-                </div>
-                <!-- THe employer should give a summary of the work and it should be assign here -->
-                <div class="work-summary">
-                    <div class="icon">
-                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <p class="summary">By taking this work opportunity, you will work in a
-                            remote environment that offers tuition....
-                        </p> 
-                    </div>
-                                    
-                </div>
-                <div class="job-card-body">
-                    <a href='#' class="job-card-location">Accra</a>
-                    <a href='#' class="job-card-type">Full Time</a>
-                    <a href='#' class="job-card-level">Entry Level</a>
-                    <a href='#' class="job-card-function">Sewing</a>
-                    <a href='#' class="job-card-education">High School</a>
-                </div>
-                <!-- <div class="job-card-footer">
-                    <button class="job-card-button">Apply</button>
-                </div> -->
-            </div>
-            
-                <button class="more-jobs">
-                    More Jobs
-                </button>
-                <h1 id="test">
-                    hi
-                </h1>
+                 </div>
+             </div>
+                
+             {% endfor %}
+                
+
+            <button class="more-jobs">
+                More Jobs
+            </button>
+            <h1 id="test">
+                hi
+            </h1>
 
         </div>
 
@@ -414,7 +269,7 @@
                     <p>To apply, you have to create an account</p>
 
                     <div class="job-card-footer">
-                        <button class="job-card-button">Apply now</button>
+                        <button class="job-card-button" onclick="window.location.href='{% url 'apply' %}'">Apply now</button>
                     </div>
 
 
