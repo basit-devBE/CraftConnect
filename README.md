@@ -29,7 +29,7 @@ CraftConnect serves as amedium through which craftsmen can display their skills.
 
 ## Contact
 - For more information, contact me at:
-    - Email: 'basitmohammed362@gmail.com"
-    - Phone: '0533355234'
+    - Email: 'basitmohammed362@gmail.com" / brobbeysemmanuel750@gmail.com
+    - Phone: '0533355234' / 0594240209
 
 
